@@ -4,6 +4,13 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
   <title>Situationally-Aware Mobile Computing – A project by Evan Knight and Parker Moore</title>
+  <link href='/css/screen.css' rel='stylesheet' type='text/css'>
+  {% if page.extra_css %}
+  {% for file_slug in page.extra_css %}
+  <link href='/css/{{ file_slug }}.css' rel='stylesheet' type='text/css'>
+  {% endfor %}
+  {% endif %}
+  <script src="/js/4240.js" type="text/javascript"></script>
 </head>
 <body>
   {{ content }}
