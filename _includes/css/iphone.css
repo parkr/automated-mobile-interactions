@@ -1,0 +1,66 @@
+::-webkit-input-placeholder {
+    color: #cccccc;
+    font-size: 13px;
+    text-align: center;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color: #cccccc;
+    font-size: 13px;
+    text-align: center;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color: #cccccc;
+    font-size: 13px;
+    text-align: center;
+}
+
+:-ms-input-placeholder {
+    color: #cccccc;
+    font-size: 13px;
+    text-align: center;
+}
+
+/* TEXT */
+
+.description {
+  width: 30%;
+}
+
+/* IMAGES */
+
+#iphone {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -350px; /* Half the height */
+    margin-left: -266px; /* Half the width */
+    z-index: -100;
+}
+
+#app_background {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -223px; /* Half the height */
+    margin-left: -177px; /* Half the width */
+    z-index: 100;
+}
+
+#automated_message {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 145px; /* Half the height */
+  margin-left: -169px; /* Half the width */
+  z-index: 105;
+  opacity: 0;
+}
+
+/* Video */
+
+.video-center {
+    margin: 0 auto;
+    width: 450px;
+}

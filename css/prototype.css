@@ -1,0 +1,19 @@
+---
+---
+
+{% capture le_css %}
+/*                     *\
+ * $animate-custom.css *
+\*                     */
+{% include css/animate-custom.css %}
+/*                *\
+ * $iphone.css    *
+\*                */
+{% include css/iphone.css %}
+{% endcapture %}
+
+{% if site.GH_ENV %}
+  {{ le_css | strip_newlines | remove: '  ' }}
+{% else %}
+  {{ le_css }}
+{% endif %}

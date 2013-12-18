@@ -11,8 +11,10 @@ title: Home
 <h3>View each piece of our project:</h3>
 <ul>
   {% for p in site.pages %}
-  {% unless p.title contains page.title %}
-    <li><a href="{{ p.url }}" title="{{ p.title }}">{{ p.title }}</a></li>
-  {% endunless %}
+    {% if p.title %}
+      {% unless p.title contains page.title %}
+        <li><a href="{{ p.url }}" title="{{ p.title }}">{{ p.title }}</a></li>
+      {% endunless %}
+    {% endif %}
   {% endfor %}
 </ul>
