@@ -1,0 +1,18 @@
+---
+layout: main
+title: Home
+---
+
+<h1 id="situationally-aware_mobile_automation">Situationally-Aware Mobile Automation</h1>
+<h2>Final project for INFO 4240, by Evan Knight and Parker Moore</h2>
+<h3>Fall 2013, Cornell University</h3>
+<hr />
+
+<h3>View each piece of our project:</h3>
+<ul>
+  {% for p in site.pages %}
+  {% unless p.title contains page.title %}
+    <li><a href="{{ p.url }}" title="{{ p.title }}">{{ p.title }}</a></li>
+  {% endunless %}
+  {% endfor %}
+</ul>
