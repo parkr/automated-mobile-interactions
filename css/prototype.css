@@ -1,0 +1,23 @@
+---
+---
+
+{% capture le_css %}
+/*                *\
+ * $lato.css      *
+\*                */
+{% include css/lato.css %}
+/*                *\
+ * $base.css      *
+\*                */
+{% include css/base.css %}
+/*                *\
+ * $iphone.css    *
+\*                */
+{% include css/iphone.css %}
+{% endcapture %}
+
+{% if site.GH_ENV %}
+  {{ le_css | strip_newlines | remove: '  ' }}
+{% else %}
+  {{ le_css }}
+{% endif %}
