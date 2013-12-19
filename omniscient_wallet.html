@@ -79,7 +79,7 @@ title: The Omniscient Wallet
     return completed.toString();
   };
 
-  $(".toggle").click(function() {
+  $(document).on('click', '.toggle', function() {
      if($(this).hasClass('active')){
        $(this).removeClass("active");
        //or $(this).parents().eq(2).addClass("toggle-active"); //for find() or closest()
