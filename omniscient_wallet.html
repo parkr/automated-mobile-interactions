@@ -1,0 +1,114 @@
+---
+layout: ratchet
+title: The Omniscient Wallet
+---
+
+<header class="bar-title">
+  <h1 class="title">The Omniscient Wallet &trade;</h1>
+</header>
+
+<div class="content">
+  <div class="content-padded">
+    <p class="">
+      The following are credit cards you have connected to your Omniscient Wallet:
+    </p>
+    <ul class="list" id="list-of-ccs">
+      <li>
+        Bank of America Debit Card
+        <div class="toggle">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+      <li>
+        Chase Platinum Credit Card
+        <div class="toggle active">
+          <div class="toggle-handle"></div>
+        </div>
+      </li>
+    </ul>
+
+    <p>Add another:</p>
+
+    <form>
+      <div class="input-group">
+        <div class="input-row">
+          <label>Number</label>
+          <input type="password" id="cc-number" placeholder="XXXXXXXXXXXXXX">
+        </div>
+        <div class="input-row">
+          <label>Name</label>
+          <input type="text" id="cc-name" placeholder="My Card">
+        </div>
+      </div>
+      <a class="button button-block" id="add-new-card">Add new card</a>
+    </form>
+
+    <div id="myModal" class="modal">
+      <header class="bar-title">
+        <h1 class="title">Modal</h1>
+        <a class="button" href="#myModal">
+          Close
+        </a>
+      </header>
+
+      <div class="content content-padded">
+        <p>The contents of my modal.</p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+(function(){
+  //
+  // Fills a string containing special templating syntax with the data provided.
+  //
+  // Ex:
+  //    tmpl = "${name} got a ${grade} in ${course}.";
+  //    data = { name: "John", grade: "B", course: "Plant Pathology" };
+  //    tmpl.template(data); // outputs "John got a B in Plant Pathology."
+  //
+  String.prototype.template = function(data) {
+    var regex = null,
+      completed = this.toString();
+    for (el in data) {
+      regex = new RegExp('\\${' + el + '}', 'g');
+      completed = completed.replace(regex, data[el]);
+    }
+    return completed.toString();
+  };
+
+  $(".toggle").click(function() {
+     if($(this).hasClass('active')){
+       $(this).removeClass("active");
+       //or $(this).parents().eq(2).addClass("toggle-active"); //for find() or closest()
+
+     }else{
+       $(this).addClass("active");
+     }
+  });
+
+  var cardTemplate = '<li> \
+    ${cardName} \
+    <div class="toggle"> \
+      <div class="toggle-handle"> </div> \
+    </div> \
+  </li>';
+
+  var appendCardNameToList = function(cardName){
+    $("#list-of-ccs").append(cardTemplate.template({"cardName": cardName}));
+  };
+
+
+  $(document).ready(function(){
+    $("#add-new-card").on('click', function(){
+      var name = $("#cc-name").val();
+      console.log(name, typeof(name));
+      if(name.length != 0) {
+        appendCardNameToList(name);
+      }
+    });
+  });
+})();
+</script>
