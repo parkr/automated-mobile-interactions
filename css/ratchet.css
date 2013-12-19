@@ -1562,3 +1562,7 @@ button.button-block {
 #pushInPhone .list {
   margin-top: 44px;
 }
+
+.content-padded > p {
+  margin-bottom: 7px;
+}

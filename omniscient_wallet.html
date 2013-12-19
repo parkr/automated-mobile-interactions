@@ -1,6 +1,7 @@
 ---
 layout: ratchet
 title: The Omniscient Wallet
+info:
 ---
 
 <header class="bar-title">
@@ -9,25 +10,31 @@ title: The Omniscient Wallet
 
 <div class="content">
   <div class="content-padded">
-    <p class="">
+    <p>
+      <h3>Why pay yourself when you can have your phone pay for you?</h3>
+    </p>
+    <p>
       The following are credit cards you have connected to your Omniscient Wallet:
     </p>
     <ul class="list" id="list-of-ccs">
       <li>
-        Bank of America Debit Card
+        Bank of America Debit Card ($245.42 available)
         <div class="toggle">
           <div class="toggle-handle"></div>
         </div>
       </li>
       <li>
-        Chase Platinum Credit Card
+        Chase Platinum Credit Card ($456.23 available)
         <div class="toggle active">
           <div class="toggle-handle"></div>
         </div>
       </li>
     </ul>
 
-    <p>Add another:</p>
+    <p>Note: <em>your cards will be enabled and disabled based on relative
+      balance, expected expenses, and expected income.</em></p>
+
+    <p><strong>Add another:</strong></p>
 
     <form>
       <div class="input-group">
@@ -90,7 +97,7 @@ title: The Omniscient Wallet
   });
 
   var cardTemplate = '<li> \
-    ${cardName} \
+    ${cardName}<br />(Determining balance...)\
     <div class="toggle"> \
       <div class="toggle-handle"> </div> \
     </div> \
