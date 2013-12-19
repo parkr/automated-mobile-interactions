@@ -1,3 +1,6 @@
+---
+title: Automated Device Information
+---
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,11 +13,11 @@
     <title>Automated Device Information</title>
 
     <!-- Bootstrap core CSS -->
-    <link href="/css/bootstrap.css" rel="stylesheet">
+    <link href="css/bootstrap.css" rel="stylesheet">
 
     <!-- Add custom CSS here -->
-    <link href="/css/stylish-portfolio.css" rel="stylesheet">
-    <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet">
   </head>
 
   <body>
@@ -261,6 +264,7 @@
         $('#form-two').show();
         var displayMessage = $('#message').val();
       localStorage.displayMessage = displayMessage;
+       $('#displayMessage').html(localStorage.displayMessage);
     });
 
 
@@ -283,6 +287,7 @@
         $('#form-two').hide();
         var displayMessageTwo = $('#message-two').val();
       localStorage.displayMessageTwo = displayMessageTwo;
+       $('#displayMessageTwo').html(localStorage.displayMessageTwo);
     });
 
 
@@ -305,6 +310,7 @@
         $('#form-three').hide();
         var displayMessageThree = $('#message-three').val();
       localStorage.displayMessageThree = displayMessageThree;
+       $('#displayMessageThree').html(localStorage.displayMessageThree);
     });
 
 
@@ -328,6 +334,7 @@
         $('#restart').show();
         var displayMessageFour = $('#message-four').val();
       localStorage.displayMessageFour = displayMessageFour;
+      $('#displayMessageFour').html(localStorage.displayMessageFour);
     });
 
 
