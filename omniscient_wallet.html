@@ -107,6 +107,8 @@ title: The Omniscient Wallet
       console.log(name, number);
       if(name.length != 0 && number.length != 0) {
         appendCardNameToList(name);
+        $("#cc-name").val("");
+        $("#cc-number").val("");
       }
     });
   });
