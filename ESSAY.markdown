@@ -3,4 +3,4 @@ layout: main
 title: Essay
 ---
 
-put a link to the essay here.
+<a href="/KnightE_MooreP_Situationally-Aware_Mobile_Automation.pdf">Knight, E. and Moore, P. "Situationally-Aware Mobile Computing".</a>
