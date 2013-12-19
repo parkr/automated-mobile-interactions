@@ -103,9 +103,9 @@ title: The Omniscient Wallet
 
   $(document).ready(function(){
     $("#add-new-card").on('click', function(){
-      var name = $("#cc-name").val();
-      console.log(name, typeof(name));
-      if(name.length != 0) {
+      var name = $("#cc-name").val(), number = $("#cc-number").val();
+      console.log(name, number);
+      if(name.length != 0 && number.length != 0) {
         appendCardNameToList(name);
       }
     });
