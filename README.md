@@ -13,3 +13,7 @@ Project for INFO 4240.
 
 - [Evan Knight](http://evanwknight.com/)
 - [Parker Moore](http://parkermoore.de/)
+
+## License
+
+&copy; 2013 Evan Knight, Parker Moore. All rights reserved.
